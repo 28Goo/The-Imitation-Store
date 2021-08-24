@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
 export default function ProductDetails({ match }) {
-    const [details, setDetails] = useState({})
+    const [details, setDetails] = useState({});
     
     useEffect(() => {
         (async () => {
@@ -9,7 +9,7 @@ export default function ProductDetails({ match }) {
             const details = await response.json();
             setDetails(details);
         })();
-    },[match])
+    },[match]);
 
     return(
         <div>

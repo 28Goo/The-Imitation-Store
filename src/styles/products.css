@@ -1,3 +1,9 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
 .productOverview {
     background-color: rgb(113, 204, 204);
 }
