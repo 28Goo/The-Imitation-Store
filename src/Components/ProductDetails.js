@@ -27,7 +27,7 @@ export default function ProductDetails({ match, addToCart, removeFromCart, input
                         <p className="productDescription">{product.description}</p>
                         <div className="cartButtons">
                             <button type='button' className="decrementProduct" data-id={product.id} onClick={removeFromCart}>-</button>
-                            <input type="text" className="productQuantity" onChange={inputQuantity} />
+                            <input type="text" className="productQuantity" minLength='1' onChange={inputQuantity} />
                             <button type='button' className="incrementProduct" data-id={product.id} onClick={addToCart}>+</button>
                             <button type='button' className='addToCart' data-id={product.id} onClick={addToCart}>Add To Cart</button>
                         </div>

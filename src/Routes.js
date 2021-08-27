@@ -1,4 +1,4 @@
-import React, { useReducer } from 'react'
+import React, { useEffect, useReducer } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Nav from './Components/Boilerplate/Nav'
 import Home from './Components/Home'
@@ -22,9 +22,9 @@ export default function Routes() {
 	}
 
 	const inputQuantity = (e) => {
-		if(isNaN(e.target.value)) return e.target.value = e.target.value.slice(e.target.value.length);
+		console.log(e.keyCode);
+		dispatch({type: ACTIONS.INPUT_QUANTITY, payload: {quantity: e.target.value}});
 	}
-
 
 	return(
 		<div className="routes">

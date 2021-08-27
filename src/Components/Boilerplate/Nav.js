@@ -8,7 +8,8 @@ export default function Nav({ cartLength }) {
             <Link to='/'> <h2 className='logo'>Logo</h2> </Link>
             <ul>
                 <Link to='/products'> <li>Products</li> </Link>
-                <Link to='/cart'> <li><span className="material-icons">shopping_bag</span></li> <span className='cartLength'>{cartLength}</span> </Link>
+                <Link to='/cart'> <li><span className="material-icons">shopping_bag</span></li></Link>
+                <span className='cartLength'>{cartLength}</span>
             </ul>
         </nav>
     )

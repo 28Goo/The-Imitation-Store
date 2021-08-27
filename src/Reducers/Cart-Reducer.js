@@ -37,8 +37,12 @@ function reducer(cart, action) {
 			});
 			return [...cart];
 
+		case ACTIONS.INPUT_QUANTITY:
+			const { quantity } = action.payload;
+			return[...cart]
+
 		default:
-			return cart;
+			return [...cart];
 	}
 }
 
