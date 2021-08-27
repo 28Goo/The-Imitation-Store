@@ -13,6 +13,7 @@ export default function Cart({ cart }) {
                     return(
                         <div className="cartProducts" key={product.id}>
                             <h1>{product.title}</h1>
+                            <h1>{product.quantity}</h1>
                         </div>
                     )
                 })
