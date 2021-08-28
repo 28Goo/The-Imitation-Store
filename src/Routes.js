@@ -13,14 +13,24 @@ export default function Routes() {
 	const [cart, dispatch] = useReducer(reducer, []);
 
 	const addToCart = async (e) => {
-		const { id, quantity } = e.target.dataset;
-		const product = await fetchProduct(id);
-		dispatch({type: ACTIONS.ADD_TO_CART, payload: {product: product, quantity: parseInt(quantity)}});
+		try {
+			const { id, quantity } = e.target.dataset;
+			const product = await fetchProduct(id);
+			dispatch({type: ACTIONS.ADD_TO_CART, payload: {product: product, quantity: parseInt(quantity)}});
+		}
+		catch(error) {
+			console.log(error);
+		}
 	}
 
 	const removeFromCart = async (e) => {
-		const { id } = e.target.dataset;
-		dispatch({type: ACTIONS.REMOVE_FROM_CART, payload: {id: parseInt(id)}});
+		try{
+			const { id } = e.target.dataset;
+			dispatch({type: ACTIONS.REMOVE_FROM_CART, payload: {id: parseInt(id)}});
+		}
+		catch(error) {
+			console.log(error);
+		}
 	}
 
 	const incrementQuantity = (e) => {

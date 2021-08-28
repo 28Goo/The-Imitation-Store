@@ -7,9 +7,14 @@ export default function ProductDetails({ match, addToCart }) {
 
     useEffect(() => {
         (async () => {
-            const { id } = match.params;
-            const product = await fetchProduct(id);
-            setProduct(product);
+            try {
+                const { id } = match.params;
+                const product = await fetchProduct(id);
+                setProduct(product);
+            }
+            catch(error) {
+                console.log(error);
+            }
         })();
     },[match]);
 
