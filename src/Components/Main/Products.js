@@ -1,25 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import '../Styles/Products.css'
+import '../../Styles/Products.css'
+import { fetchProducts } from '../Utils/Fetch-Data'
 
 export default function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetchData();
+        fetchProducts().then(products => setProducts(products));
     },[])
-
-    const fetchData = async () => {
-        try {
-            const response = await fetch('https://fakestoreapi.com/products');
-            const products = await response.json();
-            console.log(products);
-            setProducts(products);
-        }
-        catch(error) {
-            console.log(error);
-        }
-    }
     
     return(
         <div className="products">
