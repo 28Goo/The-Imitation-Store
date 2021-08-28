@@ -35,24 +35,22 @@ export default function Routes() {
 	}
 
 	return(
-		<div className="routes">
-			<Router>
-				<Nav cartLength={cart.length}/>
-				<Cart cart={cart}
-					removeFromCart={removeFromCart}
-					inputQuantity={inputQuantity}
-					incrementQuantity={incrementQuantity}
+		<Router>
+			<Nav cartLength={cart.length}/>
+			<Cart cart={cart}
+				removeFromCart={removeFromCart}
+				inputQuantity={inputQuantity}
+				incrementQuantity={incrementQuantity}
+			/>
+			<Switch>
+				<Route exact path='/' component={Home} />
+				<Route exact path='/products' component={Products} />
+				<Route exact path='/products/:id'
+					render={(props) => <ProductDetails {...props}
+					addToCart={addToCart}
+					/>}
 				/>
-				<Switch>
-					<Route exact path='/' component={Home} />
-					<Route exact path='/products' component={Products} />
-					<Route exact path='/products/:id'
-						render={(props) => <ProductDetails {...props}
-						addToCart={addToCart}
-						/>}
-					/>
-				</Switch>
-			</Router>
-		</div>
+			</Switch>
+		</Router>
     )
 }
