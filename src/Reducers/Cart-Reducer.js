@@ -1,3 +1,4 @@
+import { quantityChecker } from '../Components/Utils/Quantity';
 import ACTIONS from './Actions'
 
 function reducer(cart, action) {
@@ -8,6 +9,7 @@ function reducer(cart, action) {
 				for(let item = 0; item < cart.length; item++) {
 					if(cart[item].id === action.payload.product.id) {
 						duplicate = true;
+						if(quantityChecker(cart[item].quantity, action.payload.quantity) === true) return [...cart];
 						cart[item].quantity += action.payload.quantity;
 						return [...cart];
 					}
@@ -40,6 +42,7 @@ function reducer(cart, action) {
 		case ACTIONS.INCREMENT_QUANTITY:
 			cart.forEach(item => {
 				if (item.id === action.payload.id) {
+					if(item.quantity >= 100) return;
 					item.quantity += 1;
 				}
 			})
@@ -48,7 +51,7 @@ function reducer(cart, action) {
 		case ACTIONS.INPUT_QUANTITY:
 			cart.forEach(item => {
 				if(item.id === action.payload.id) {
-					if(action.payload.quantity <= 0 || isNaN(action.payload.quantity)) return;
+					if(action.payload.quantity <= 0 || action.payload.quantity > 100 || isNaN(action.payload.quantity)) return;
 					item.quantity = action.payload.quantity;
 				}
 			})

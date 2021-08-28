@@ -31,7 +31,7 @@ export default function ProductDetails({ match, addToCart }) {
         let { value } = e.target;
         if (isNaN(value)) return;
         else if(value.length === 0) value = 1;
-        else if (value <= 0) return;
+        else if (value <= 0 || value > 100) return;
         setQuantity(prevQuantity => prevQuantity = parseInt(value));
     }
 

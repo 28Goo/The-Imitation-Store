@@ -10,7 +10,7 @@ export default function Cart({ cart, incrementQuantity, removeFromCart, inputQua
                     return(
                         <div className="cartProducts" key={product.id}>
                             <h1>{product.title}</h1>
-                            <h1>{product.quantity}</h1>
+                            <h1>${product.price * product.quantity}</h1>
                             <CartForm product={product}
                                 incrementQuantity={incrementQuantity}
                                 removeFromCart={removeFromCart}
