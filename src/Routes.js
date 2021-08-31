@@ -5,9 +5,10 @@ import Home from './Components/Main/Home';
 import Products from './Components/Main/Products';
 import Cart from './Components/Cart/Cart';
 import ProductDetails from './Components/Main/ProductDetails';
+import Footer from './Components/Boilerplate/Footer';
 import ACTIONS from './Reducers/Actions';
 import { reducer } from './Reducers/Cart-Reducer';
-import { fetchProduct } from './Components/Utils/Fetch-Data'
+import { fetchProduct } from './Components/Utils/Fetch-Data';
 
 export default function Routes() {
 	const [cart, dispatch] = useReducer(reducer, []);
@@ -67,6 +68,7 @@ export default function Routes() {
 					/>}
 				/>
 			</Switch>
+			<Footer />
 		</Router>
     )
 }

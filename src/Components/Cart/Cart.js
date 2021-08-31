@@ -7,7 +7,10 @@ export default function Cart({ cart, incrementQuantity, removeFromCart, inputQua
 
     useEffect(() => {
         let computation = 0;
-        if (cart.length === 0) setTotal(0);
+        if (cart.length === 0) {
+            setTotal(0);
+            return;
+        }
         cart.forEach(product => {
             computation += product.price * product.quantity;
             setTotal(parseFloat(computation.toFixed(2)));

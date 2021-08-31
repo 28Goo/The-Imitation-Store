@@ -58,7 +58,7 @@ function reducer(cart, action) {
 			return[...cart];
 
 		case ACTIONS.CHECKOUT:
-			return cart = [];
+			return [];
 
 		default:
 			return [...cart];

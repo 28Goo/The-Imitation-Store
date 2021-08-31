@@ -1,14 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 export default function Nav({ cartLength }) {
     return(
         <nav>
-            <Link to='/'> <h2 className='logo'>Logo</h2> </Link>
+            <NavLink to='/'> <h2 className='logo'>Logo</h2> </NavLink>
             <ul>
-                <Link to='/products'> <li>Products</li> </Link>
-                <Link to='/cart'> <li><span className="material-icons">shopping_bag</span></li></Link>
+                <NavLink to='/products'> <li>Products</li> </NavLink>
+                <NavLink to='/cart'> <li><span className="material-icons">shopping_bag</span></li></NavLink>
                 <span className='cartLength'>{cartLength}</span>
             </ul>
         </nav>
