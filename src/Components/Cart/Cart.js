@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import CartForm from './Cart-Form'
 import '../../Styles/Cart.css';
 
-export default function Cart({ cart, incrementQuantity, removeFromCart, inputQuantity }) {
+export default function Cart({ cart, incrementQuantity, removeFromCart, inputQuantity, checkout }) {
     const [total, setTotal] = useState();
 
     useEffect(() => {
         let computation = 0;
+        if (cart.length === 0) setTotal(0);
         cart.forEach(product => {
             computation += product.price * product.quantity;
             setTotal(parseFloat(computation.toFixed(2)));
@@ -32,6 +33,7 @@ export default function Cart({ cart, incrementQuantity, removeFromCart, inputQua
                 })
             }
             <h1 className="total">${total}</h1>
+            <button className="checkout" onClick={checkout}>Checkout</button>
         </div>
     )
 }

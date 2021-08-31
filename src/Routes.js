@@ -44,6 +44,10 @@ export default function Routes() {
 		dispatch({type: ACTIONS.INPUT_QUANTITY, payload: {quantity: parseInt(value), id: parseInt(id)}});
 	}
 
+	const checkout = () => {
+		dispatch({type: ACTIONS.CHECKOUT});
+	}
+
 	return(
 		<Router>
 			<Nav cartLength={cart.length}/>
@@ -51,6 +55,7 @@ export default function Routes() {
 				removeFromCart={removeFromCart}
 				inputQuantity={inputQuantity}
 				incrementQuantity={incrementQuantity}
+				checkout={checkout}
 			/>
 			<Switch>
 				<Route exact path='/' component={Home} />

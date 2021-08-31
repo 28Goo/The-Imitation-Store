@@ -55,7 +55,10 @@ function reducer(cart, action) {
 					item.quantity = action.payload.quantity;
 				}
 			})
-			return[...cart]
+			return[...cart];
+
+		case ACTIONS.CHECKOUT:
+			return cart = [];
 
 		default:
 			return [...cart];

@@ -3,6 +3,7 @@ const ACTIONS = {
     REMOVE_FROM_CART: 'removeFromCart',
     INPUT_QUANTITY: 'inputQuantity',
     INCREMENT_QUANTITY: 'incrementQuantity',
+    CHECKOUT: 'checkout',
 };
 
 export default ACTIONS;
