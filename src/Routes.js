@@ -57,6 +57,7 @@ export default function Routes() {
 				<Route exact path='/products' component={Products} />
 				<Route exact path='/products/:id'
 					render={(props) => <ProductDetails {...props}
+					cart={cart}
 					addToCart={addToCart}
 					/>}
 				/>

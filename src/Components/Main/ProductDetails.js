@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { fetchProduct } from '../Utils/Fetch-Data'
+import { cartQuantityChecker } from '../Utils/Quantity';
 
-export default function ProductDetails({ match, addToCart }) {
+export default function ProductDetails({ match, cart, addToCart }) {
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState(1);
 
@@ -19,6 +20,7 @@ export default function ProductDetails({ match, addToCart }) {
     },[match]);
 
     const incrementQuantity = () => {
+        if(cartQuantityChecker(cart, match, quantity + 1) ===  true) return;
         setQuantity(prevQuantity => prevQuantity + 1);
     }
 
@@ -32,6 +34,7 @@ export default function ProductDetails({ match, addToCart }) {
         if (isNaN(value)) return;
         else if(value.length === 0) value = 1;
         else if (value <= 0 || value > 100) return;
+        if(cartQuantityChecker(cart, match, value) ===  true) return;
         setQuantity(prevQuantity => prevQuantity = parseInt(value));
     }
 

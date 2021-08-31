@@ -4,4 +4,14 @@ const quantityChecker = (prevQuantity, addedQuantity) => {
     else return false;
 }
 
-export { quantityChecker }
+const cartQuantityChecker = (cart, match, addedQuantity) => {
+    let checker = false
+    cart.forEach(product => {
+        if(parseInt(match.params.id) === product.id) {
+            if(product.quantity + parseInt(addedQuantity) > 100) checker = true;
+        }
+    });
+    return checker;
+}
+
+export { quantityChecker, cartQuantityChecker }
