@@ -1,4 +1,4 @@
-import { quantityChecker } from '../Components/Utils/Quantity';
+import { quantityChecker } from '../Utils/Quantity';
 import ACTIONS from './Actions'
 
 function reducer(cart, action) {

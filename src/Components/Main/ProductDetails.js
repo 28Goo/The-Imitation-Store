@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { fetchProduct } from '../Utils/Fetch-Data'
-import { cartQuantityChecker } from '../Utils/Quantity';
+import { fetchProduct } from '../../Utils/Fetch-Data'
+import { cartQuantityChecker } from '../../Utils/Quantity';
 
 export default function ProductDetails({ match, cart, addToCart }) {
     const [product, setProduct] = useState({});

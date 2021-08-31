@@ -1,0 +1,50 @@
+:root {
+    --Oswald: 'Oswald', sans-serif;
+    --Noto: 'Noto Sans JP', sans-serif;
+}
+
+* {
+    font-family: var(--Noto);
+}
+
+nav,
+ul {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.logo {
+    font-family: var(--Oswald);
+}
+
+.navProducts {
+    font-weight: 600;
+}
+
+.cartLogo {
+    padding-top: 5px;
+    font-size: 1.8rem;
+}
+
+@media screen and (min-width: 350px) {
+    nav {
+        padding: 10px 20px 10px 20px;
+    }
+
+    li {
+        margin: 0px 3px 0px 3px;
+    }
+}

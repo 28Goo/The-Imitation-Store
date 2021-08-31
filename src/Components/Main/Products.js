@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import '../../Styles/Products.css'
-import { fetchProducts } from '../Utils/Fetch-Data'
+import { fetchProducts } from '../../Utils/Fetch-Data'
 
 export default function Products() {
     const [products, setProducts] = useState([]);
