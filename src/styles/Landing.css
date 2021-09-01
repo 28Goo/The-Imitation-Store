@@ -3,9 +3,3 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
-.landing {
-    height: 100vh;
-    background-image: url('../Assets/landing.jpg');
-    background-position: center;
-}

@@ -6,11 +6,13 @@ import '../../Styles/Nav.css';
 export default function Nav({ cartLength }) {
     return(
         <nav>
-            <NavLink to='/'> <h2 className='logo'>The Imitation Store</h2> </NavLink>
             <ul>
-                <NavLink to='/products'> <li className='navProducts'>Products</li> </NavLink>
-                <NavLink to='/cart'> <li><span className="material-icons cartLogo">shopping_bag</span></li></NavLink>
-                <span className='cartLength'>({cartLength})</span>
+                <NavLink to='/products'> <li className='navProducts'>Shop</li> </NavLink>
+                <NavLink to='/'> <h2 className='logo'>The Imitation Store</h2> </NavLink>
+                <NavLink to='/cart'> <li className='cartLogoContainer'>
+                    <span className="material-icons cartLogo">shopping_bag</span>
+                    <span className='cartLength'>({cartLength})</span>
+                    </li></NavLink>
             </ul>
         </nav>
     )

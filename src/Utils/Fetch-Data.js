@@ -20,6 +20,27 @@ const fetchProduct =  async (id) => {
     }
 }
 
+const fetchCategories = async () => {
+    try{
+        const data = await fetch('https://fakestoreapi.com/products/categories');
+        const categories = await data.json();
+        return categories;
+    }
+    catch(error) {
+        console.log(error);
+    }
+}
+
+const fetchCategoryProduct = async (category) => {
+    try{
+        const data = await fetch(`https://fakestoreapi.com/products/category/${category}`);
+        const products = await data.json();
+        return products;
+    }
+    catch(error) {
+        console.log(error);
+    }
+}
 
 
-export { fetchProducts, fetchProduct }
+export { fetchProducts, fetchProduct, fetchCategories, fetchCategoryProduct }

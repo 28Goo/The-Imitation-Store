@@ -24,8 +24,8 @@ export default function Cart({ cart, incrementQuantity, removeFromCart, inputQua
                 cart.map(product => {
                     return(
                         <div className="cartProducts" key={product.id}>
-                            <h1>{product.title}</h1>
-                            <h1>${(product.price * product.quantity).toFixed(2)}</h1>
+                            <p>{product.title}</p>
+                            <p>${(product.price * product.quantity).toFixed(2)}</p>
                             <CartForm product={product}
                                 incrementQuantity={incrementQuantity}
                                 removeFromCart={removeFromCart}

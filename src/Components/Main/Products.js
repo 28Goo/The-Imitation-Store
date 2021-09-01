@@ -8,7 +8,7 @@ export default function Products() {
 
     useEffect(() => {
         fetchProducts().then(products => setProducts(products));
-    },[])
+    },[]);
     
     return(
         <div className="products">
@@ -17,9 +17,9 @@ export default function Products() {
                 products.map(product => {
                     return(
                         <div className="productOverview" key={product.id}>
-                            <img src={product.image} alt={product.title} />
-                            <Link to={`products/${product.id}`}>
-                                <h2>{product.title}</h2> 
+                            <img className='productImage' src={product.image} alt={product.title} />
+                            <Link to={`products/${product.category}/${product.id}`}>
+                                <p>{product.title}</p> 
                             </Link>
                             <span className='productPrice'>${product.price}</span>
                         </div>

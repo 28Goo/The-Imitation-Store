@@ -4,11 +4,12 @@ import Nav from './Components/Boilerplate/Nav';
 import Landing from './Components/Main/Landing';
 import Products from './Components/Main/Products';
 import Cart from './Components/Cart/Cart';
-import ProductDetails from './Components/Main/ProductDetails';
+import ProductDetails from './Components/Main/Product-Details';
 import Footer from './Components/Boilerplate/Footer';
 import ACTIONS from './Reducers/Actions';
 import { reducer } from './Reducers/Cart-Reducer';
 import { fetchProduct } from './Utils/Fetch-Data';
+import CategoryProduct from './Components/Main/Category-Products';
 
 export default function Routes() {
 	const [cart, dispatch] = useReducer(reducer, []);
@@ -61,7 +62,8 @@ export default function Routes() {
 			<Switch>
 				<Route exact path='/' component={Landing} />
 				<Route exact path='/products' component={Products} />
-				<Route exact path='/products/:id'
+				<Route exact path='/products/:category' component={CategoryProduct} />
+				<Route exact path='/products/:category/:id'
 					render={(props) => <ProductDetails {...props}
 					cart={cart}
 					addToCart={addToCart}
