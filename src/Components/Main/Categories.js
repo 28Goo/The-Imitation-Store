@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { fetchCategories } from '../../Utils/Fetch-Data';
-import uniqid from 'uniqid';
 import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../Utils/String-Manipulation';
+import uniqid from 'uniqid';
 
 export default function Categories() {
     const [categories, setCategories] = useState([]);
@@ -13,19 +13,22 @@ export default function Categories() {
 
     return(
         <div className="categories">
+            <h1 className="categoryHeader">Categories</h1>
+            <div className="categoryContainer">
             {
                 categories.map(category => {
                     const image = require(`../../Assets/${category}.jpg`).default;
                     return(
                         <div className={`category ${category}`} key={uniqid()}>
-                            <Link to={`products/${category}`}>
-                                <img className='categoryImage' src={image} alt={category} />
-                                <h1 className="categoryName">{capitalizeFirstLetter(category)}</h1>
-                            </Link>
+                        <Link className='categoryLink' to={`products/${category}`}>
+                            <img className='categoryImage' src={image} alt={category} />
+                            <span className="categoryName">{capitalizeFirstLetter(category)}</span>
+                        </Link>
                         </div>
                     )
                 })
             }
+            </div>
         </div>
     );
 }

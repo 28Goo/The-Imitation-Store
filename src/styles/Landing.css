@@ -1,5 +1,151 @@
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+@import './Constants.css';
+
+.titleSection {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.landingTitle {
+    font-family: var(--Oswald);
+}
+
+.categories {
+    display: grid;
+    place-content: center;
+}
+
+.categoryHeader {
+    font-family: var(--Oswald);
+    text-align: center;
+}
+
+.categoryName {
+    color: black;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.footer a {
+    color: white;
+}
+
+@media screen and (min-width: 350px) {
+    .categoryContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        height: 100%;
+        width: 100%;
+    }
+
+    .categoryHeader {
+        margin-bottom: 20px;
+    }
+
+    .category {
+        margin: 10px;
+    }
+
+    .categoryLink {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .categoryImage {
+        height: 130px;
+        margin-bottom: 10px;
+    }
+
+    .categoryName {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .navProducts {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .categoryContainer {
+        display: flex;
+    }
+
+    .categoryImage {
+        height: 120px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    .categoryImage {
+        height: 150px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .navProducts {
+        font-size: 1.5rem;
+    }
+
+    .logo,
+    .cartLogo {
+        font-size: 2.5rem;
+    }
+
+    .cartLength {
+        font-size: 1.5rem;
+    }
+
+    .landingTitle {
+        font-size: 3rem;
+    }
+
+    .categoryImage {
+        height: 200px;
+    }
+
+    .categoryName {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .navProducts {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .cartLogo {
+        font-size: 2rem;
+    }
+
+    .cartLength {
+        font-size: 1.2rem;
+    }
+
+    .categoryHeader {
+        font-size: 3rem;
+    }
+
+    .categoryImage {
+        height: 350px;
+    }
 }

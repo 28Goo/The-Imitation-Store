@@ -5,7 +5,9 @@ import Categories from './Categories';
 function Landing() {
   return (
     <div className="landing">
-      <h1>Home</h1>
+      <div className="titleSection">
+        <h1 className="landingTitle">Tagline</h1>
+      </div>
       <Categories />
     </div>
   );

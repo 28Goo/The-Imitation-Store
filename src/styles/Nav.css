@@ -1,7 +1,4 @@
-:root {
-    --Oswald: 'Oswald', sans-serif;
-    --Noto: 'Noto Sans JP', sans-serif;
-}
+@import './Constants.css';
 
 * {
     font-family: var(--Noto);
@@ -23,9 +20,12 @@ ul {
     justify-content: space-between;
 }
 
+nav a {
+    color: black;
+}
+
 a {
     text-decoration: none;
-    color: black;
 }
 
 .logo {
