@@ -18,8 +18,8 @@ export default function CategoryProduct({ match }) {
                 products.map(product => {
                     return(
                         <div className="categoryProduct" key={product.id}>
-                            <img src={product.image} alt={product.title} />
                             <Link to={`${product.category}/${product.id}`} >
+                                <img src={product.image} alt={product.title} />
                                 <p>{product.title}</p>
                             </Link>
                         </div>

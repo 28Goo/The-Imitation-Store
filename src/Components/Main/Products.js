@@ -17,8 +17,8 @@ export default function Products() {
                 products.map(product => {
                     return(
                         <div className="productOverview" key={product.id}>
-                            <img className='productImage' src={product.image} alt={product.title} />
                             <Link to={`products/${product.category}/${product.id}`}>
+                                <img className='productImage' src={product.image} alt={product.title} />
                                 <p>{product.title}</p> 
                             </Link>
                             <span className='productPrice'>${product.price}</span>
