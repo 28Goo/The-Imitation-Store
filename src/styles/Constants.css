@@ -1,6 +1,7 @@
 :root {
     --Oswald: 'Oswald', sans-serif;
     --Noto: 'Noto Sans JP', sans-serif;
+    --Border: 0.1px solid rgb(202, 202, 202);
 }
 
 * {

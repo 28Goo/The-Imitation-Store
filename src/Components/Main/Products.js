@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import '../../Styles/Products.css'
-import { fetchProducts } from '../../Utils/Fetch-Data'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { fetchProducts } from '../../Utils/Fetch-Data';
 
 export default function Products() {
     const [products, setProducts] = useState([]);
@@ -12,21 +11,27 @@ export default function Products() {
     
     return(
         <div className="products">
-            <h1>Products</h1>
+            <h1 className='productsHeader'>Products</h1>
+            <div className="productsContainer allProducts">
             {
                 products.map(product => {
                     return(
-                        <div className="productOverview" key={product.id}>
-                            <Link to={`products/${product.category}/${product.id}`}>
-                                <img className='productImage' src={product.image} alt={product.title} />
-                                <p>{product.title}</p> 
-                            </Link>
-                            <span className='productPrice'>${product.price}</span>
-                        </div>
+                        <Link to={`products/${product.category}/${product.id}`} className='productLink' key={product.id}>
+                            <div className="productOverview">
+                                <div className="productImageContainer">
+                                    <img className={`productImage ${product.category}Image`} src={product.image} alt={product.title} />
+                                </div>
+                                <div className="productNamePrice">
+                                    <span className='productName'>{product.title}</span> 
+                                    <span className='productPrice'>${product.price}</span>
+                                </div>
+                            </div>
+                        </Link>
                         
                     )
                 })
             }
+            </div>
         </div>
     )
 }

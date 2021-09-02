@@ -1,5 +1,5 @@
 import { quantityChecker } from '../Utils/Quantity';
-import ACTIONS from './Actions'
+import ACTIONS from './Actions';
 
 function reducer(cart, action) {
 	switch (action.type) {

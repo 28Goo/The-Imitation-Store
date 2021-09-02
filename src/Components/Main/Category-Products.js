@@ -12,20 +12,27 @@ export default function CategoryProduct({ match }) {
     },[match]);
 
     return(
-        <div className="categoryProducts">
-            <h1 className="categoryTitle">{capitalizeFirstLetter(match.params.category)}</h1>
+        <div className="products">
+            <h1 className="productsHeader">{capitalizeFirstLetter(match.params.category)}</h1>
+            <div className="productsContainer">
             {
                 products.map(product => {
                     return(
-                        <div className="categoryProduct" key={product.id}>
-                            <Link to={`${product.category}/${product.id}`} >
-                                <img src={product.image} alt={product.title} />
-                                <p>{product.title}</p>
-                            </Link>
-                        </div>
+                        <Link to={`${product.category}/${product.id}`} className='productLink' key={product.id}>
+                            <div className="productOverview">
+                                <div className="productImageContainer">
+                                    <img className={`productImage ${product.category}Image`} src={product.image} alt={product.title} />
+                                </div>
+                                <div className="productNamePrice">
+                                    <span className='productName'>{product.title}</span> 
+                                    <span className='productPrice'>${product.price}</span>
+                                </div>
+                            </div>
+                        </Link>
                     )
                 })
             }
+            </div>
         </div>
     );
 }

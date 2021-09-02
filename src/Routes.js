@@ -10,6 +10,8 @@ import ACTIONS from './Reducers/Actions';
 import { reducer } from './Reducers/Cart-Reducer';
 import { fetchProduct } from './Utils/Fetch-Data';
 import CategoryProduct from './Components/Main/Category-Products';
+import './Styles/Products.css';
+import './Styles/Footer.css';
 
 export default function Routes() {
 	const [cart, dispatch] = useReducer(reducer, []);

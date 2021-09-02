@@ -46,12 +46,55 @@ a {
     font-size: 1.8rem;
 }
 
-@media screen and (min-width: 350px) {
+@media screen and (min-width: 320px) {
     nav {
         padding: 10px 20px 10px 20px;
     }
 
     li {
         margin: 0px 3px 0px 3px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .navProducts {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .navProducts {
+        font-size: 1.5rem;
+    }
+
+    .logo,
+    .cartLogo {
+        font-size: 2.5rem;
+    }
+
+    .cartLength {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .navProducts {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .cartLogo {
+        font-size: 2rem;
+    }
+
+    .cartLength {
+        font-size: 1.2rem;
     }
 }

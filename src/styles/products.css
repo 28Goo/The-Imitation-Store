@@ -1,3 +1,177 @@
-.productImage {
-    height: 150px;
+@import './Constants.css';
+
+.products {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
+}
+
+.productsHeader {
+    font-family: var(--Oswald);
+    text-align: center;
+}
+
+.productsContainer {
+    display: grid;
+    place-content: center;
+}
+
+.productLink {
+    border: var(--Border);
+    transition: 0.5s ease;
+}
+
+.productLink:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, 0.3);
+}
+
+.productOverview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.productImageContainer {
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+    display: grid;
+    place-content: center;
+    background-color: white;
+}
+
+.productNamePrice {
+    display: grid;
+    place-content: center;
+    width: 100%;
+    padding: 5px;
+    border-top: var(--Border);
+}
+
+@media screen and (min-width: 320px) {
+    .productsHeader {
+        font-size: 1.6rem;
+    }
+
+    .productsContainer {
+        padding: 10px;
+        grid-template-columns: repeat(2, 150px);
+    }
+
+    .productLink {
+        margin: 10px;
+    }
+
+    .productImageContainer {
+        height: 120px;
+    }
+
+    .productImage {
+        height: 80px;
+    }
+
+    .jeweleryImage {
+        height: 65px;
+    }
+
+    .productNamePrice {
+        height: 80px;
+    }
+
+    .productName,
+    .productPrice {
+        font-size: 0.55rem;
+        color: black;
+    }
+
+    .productName {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 350px) {
+    .productsContainer {
+        grid-template-columns: repeat(2, 170px);
+    }
+}
+
+@media screen and (min-width: 540px) {
+    .productsContainer {
+        grid-template-columns: repeat(3, 160px);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .productsContainer {
+        grid-template-columns: repeat(3, 200px);
+    }
+
+    .productImageContainer {
+        height: 150px;
+    }
+
+    .productImage {
+        height: 100px;
+    }
+
+    .jeweleryImage {
+        height: 75px;
+    }
+
+    .productName,
+    .productPrice {
+        font-size: 0.65rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .productsHeader {
+        font-size: 2.3rem;
+    }
+
+    .productsContainer {
+        grid-template-columns: repeat(4, 230px);
+    }
+
+    .productImage {
+        height: 100px;
+    }
+
+    .jeweleryImage {
+        height: 85px;
+    }
+
+    .productNamePrice {
+        height: 100px;
+    }
+
+    .productName,
+    .productPrice {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .productsContainer {
+        grid-template-columns: repeat(4, 250px);
+    }
+
+    .productImageContainer {
+        height: 300px;
+    }
+
+    .productImage {
+        height: 130px;
+    }
+
+    .jeweleryImage {
+        height: 100px;
+    }
+
+    .productNamePrice {
+        height: 120px;
+    }
 }

@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import CartForm from './Cart-Form'
+import React, { useEffect, useState } from 'react';
+import CartForm from './Cart-Form';
 import '../../Styles/Cart.css';
 
 export default function Cart({ cart, incrementQuantity, removeFromCart, inputQuantity, checkout }) {

@@ -5,7 +5,7 @@ import '../../Styles/Nav.css';
 
 export default function Nav({ cartLength }) {
     return(
-        <nav>
+        <nav className='navbar'>
             <ul>
                 <NavLink to='/products'> <li className='navProducts'>Shop</li> </NavLink>
                 <NavLink to='/'> <h2 className='logo'>The Imitation Store</h2> </NavLink>
