@@ -1,0 +1,168 @@
+@import './Constants.css';
+
+.product {
+    min-height: 89vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productDetailImageContainer {
+    display: grid;
+    place-content: center;
+}
+
+.productDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px 10px 15px;
+}
+
+.productDetailName,
+.productDetailPrice,
+.productDescription,
+.productForm {
+    margin: 5px;
+}
+
+.productDetailName {
+    font-family: var(--Oswald);
+}
+
+.productForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.productFormQuantity {
+    display: flex;
+    justify-content: center;
+}
+
+.productQuantity {
+    text-align: center;
+    width: 50%;
+    border: none;
+    border-top: var(--Quantity-Border);
+    border-bottom: var(--Quantity-Border);
+}
+
+.quantityButton {
+    background-color: white;
+    border: var(--Quantity-Border);
+    border-top: var(--Quantity-Border);
+    border-bottom: var(--Quantity-Border);
+}
+
+.decrementButton {
+    border-right: none;
+}
+
+.incrementButton {
+    border-left: none;
+}
+
+.addToCart {
+    font-family: var(--Oswald);
+    width: 50%;
+}
+
+@media screen and (min-width: 300px) {
+    .product {
+        flex-direction: column;
+    }
+
+    .productDetailImage {
+        height: 200px;
+    }
+
+    .jeweleryDetailImage {
+        height: 150px;
+    }
+
+    .productDetailName {
+        font-size: 1.3rem;
+    }
+
+    .productDetailPrice {
+        font-size: 0.9rem;
+    }
+
+    .productDescription {
+        font-size: 0.75rem;
+        width: 90%;
+    }
+
+    .productForm {
+        margin-top: 20px;
+    }
+
+    .quantityButton {
+        height: 30px;
+        width: 30px;
+    }
+
+    .productFormQuantity {
+        margin-bottom: 20px;
+    }
+
+    .addToCart {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .productDetailName {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .productDetailImage {
+        height: 300px;
+    }
+
+    .productDetails {
+        width: 80%;
+    }
+
+    .productDetailName {
+        font-size: 1.7rem;
+    }
+
+    .productDetailPrice {
+        font-size: 1.2rem;
+    }
+
+    .productDescription {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .productDetailImage {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .product {
+        flex-direction: row;
+        padding: 30px;
+    }
+
+    .productDetailImageContainer {
+        padding: 30px;
+    }
+
+    .productDetails {
+        width: 50%;
+    }
+
+    .productDescription {
+        text-align: center;
+    }
+}

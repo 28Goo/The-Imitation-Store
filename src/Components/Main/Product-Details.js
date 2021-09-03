@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchProduct } from '../../Utils/Fetch-Data';
 import { cartQuantityChecker } from '../../Utils/Quantity';
+import '../../Styles/Product-Details.css';
 
 export default function ProductDetails({ match, cart, addToCart }) {
     const [product, setProduct] = useState({});
@@ -40,15 +41,19 @@ export default function ProductDetails({ match, cart, addToCart }) {
 
     return(
         <div className="product" >
-            <img src={product.image} alt={product.title} />
+            <div className="productDetailImageContainer">
+                <img src={product.image} alt={product.title} className={`productDetailImage ${product.category}DetailImage`}/>
+            </div>
             <div className="productDetails">
-                <h2 className='productTitle'>{product.title}</h2>
-                <p className='productPrice'>${product.price}</p>
+                <h2 className='productDetailName'>{product.title}</h2>
+                <p className='productDetailPrice'>${product.price}</p>
                 <p className="productDescription">{product.description}</p>
                 <div className="productForm">
-                    <button type='button' className="decrementQuantity" onClick={decrementQuantity}>-</button>
-                    <input type="number" className="productQuantity" min='1' value={quantity} onChange={inputQuantity} />
-                    <button type='button' className="incrementQuantity" onClick={incrementQuantity}>+</button>
+                    <div className="productFormQuantity">
+                        <button type='button' className="decrementButton quantityButton" onClick={decrementQuantity}>-</button>
+                        <input type="number" className="productQuantity" min='1' value={quantity} onChange={inputQuantity} />
+                        <button type='button' className="incrementButton quantityButton" onClick={incrementQuantity}>+</button>
+                    </div>
                     <button type='button' className='addToCart' data-id={product.id} data-quantity={quantity} onClick={addToCart}>Add To Cart</button>
                 </div>
             </div>

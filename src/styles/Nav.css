@@ -1,9 +1,5 @@
 @import './Constants.css';
 
-* {
-    font-family: var(--Noto);
-}
-
 nav,
 ul {
     display: flex;
@@ -12,6 +8,7 @@ ul {
 
 nav {
     justify-content: center;
+    margin-bottom: 20px;
 }
 
 ul {
@@ -40,6 +37,7 @@ a {
     display: flex;
     align-items: center;
     padding-top: 5px;
+    cursor: pointer;
 }
 
 .cartLogo {

@@ -2,6 +2,7 @@ import React, { useReducer } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Nav from './Components/Boilerplate/Nav';
 import Landing from './Components/Main/Landing';
+import Backdrop from './Components/Boilerplate/Backdrop'
 import Products from './Components/Main/Products';
 import Cart from './Components/Cart/Cart';
 import ProductDetails from './Components/Main/Product-Details';
@@ -55,6 +56,7 @@ export default function Routes() {
 	return(
 		<Router>
 			<Nav cartLength={cart.length}/>
+			<Backdrop />
 			<Cart cart={cart}
 				removeFromCart={removeFromCart}
 				inputQuantity={inputQuantity}

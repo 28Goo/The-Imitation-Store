@@ -1,3 +1,17 @@
 .cart {
-    display: none;
+    display: block;
+    background-color: bisque;
+    position: fixed;
+    top: 0%;
+    right: 0%;
+    z-index: 1;
+    height: 100vh;
+    transform: translateX(100%);
+    transition: 1s ease;
+}
+
+@media screen and (min-width: 300px) {
+    .cart {
+        width: 50%;
+    }
 }
