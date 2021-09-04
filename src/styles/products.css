@@ -80,13 +80,14 @@
     }
 
     .productNamePrice {
-        height: 80px;
+        height: 120px;
     }
 
     .productName,
     .productPrice {
-        font-size: 0.55rem;
+        font-size: 0.6rem;
         color: black;
+        padding: 0px 5px 0px 5px;
     }
 
     .productName {
