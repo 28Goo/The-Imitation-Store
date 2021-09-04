@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/The-Imitation-Store/static/css/main.155b7376.chunk.css",
+    "main.js": "/The-Imitation-Store/static/js/main.de4ec215.chunk.js",
+    "main.js.map": "/The-Imitation-Store/static/js/main.de4ec215.chunk.js.map",
+    "runtime-main.js": "/The-Imitation-Store/static/js/runtime-main.33b87fc1.js",
+    "runtime-main.js.map": "/The-Imitation-Store/static/js/runtime-main.33b87fc1.js.map",
+    "static/js/2.70874530.chunk.js": "/The-Imitation-Store/static/js/2.70874530.chunk.js",
+    "static/js/2.70874530.chunk.js.map": "/The-Imitation-Store/static/js/2.70874530.chunk.js.map",
+    "index.html": "/The-Imitation-Store/index.html",
+    "static/css/main.155b7376.chunk.css.map": "/The-Imitation-Store/static/css/main.155b7376.chunk.css.map",
+    "static/js/2.70874530.chunk.js.LICENSE.txt": "/The-Imitation-Store/static/js/2.70874530.chunk.js.LICENSE.txt",
+    "static/media/Landing-Video.mp4": "/The-Imitation-Store/static/media/Landing-Video.bf23ee91.mp4",
+    "static/media/electronics.jpg": "/The-Imitation-Store/static/media/electronics.ede1c41d.jpg",
+    "static/media/jewelery.jpg": "/The-Imitation-Store/static/media/jewelery.dfea3dc6.jpg",
+    "static/media/landing.jpg": "/The-Imitation-Store/static/media/landing.7eb186ef.jpg",
+    "static/media/men's clothing.jpg": "/The-Imitation-Store/static/media/men's clothing.7a498a13.jpg",
+    "static/media/women's clothing.jpg": "/The-Imitation-Store/static/media/women's clothing.5b9314ef.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33b87fc1.js",
+    "static/js/2.70874530.chunk.js",
+    "static/css/main.155b7376.chunk.css",
+    "static/js/main.de4ec215.chunk.js"
+  ]
+}
