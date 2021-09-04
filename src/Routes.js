@@ -64,10 +64,10 @@ export default function Routes() {
 				checkout={checkout}
 			/>
 			<Switch>
-				<Route exact path='/' component={Landing} />
-				<Route exact path='/products' component={Products} />
-				<Route exact path='/products/:category' component={CategoryProduct} />
-				<Route exact path='/products/:category/:id'
+				<Route exact path='/The-Imitation-Store' component={Landing} />
+				<Route exact path='/The-Imitation-Store/products' component={Products} />
+				<Route exact path='/The-Imitation-Store/products/:category' component={CategoryProduct} />
+				<Route exact path='/The-Imitation-Store/products/:category/:id'
 					render={(props) => <ProductDetails {...props}
 					cart={cart}
 					addToCart={addToCart}

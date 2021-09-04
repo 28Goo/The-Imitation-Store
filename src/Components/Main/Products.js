@@ -16,7 +16,7 @@ export default function Products() {
             {
                 products.map(product => {
                     return(
-                        <Link to={`products/${product.category}/${product.id}`} className='productLink' key={product.id}>
+                        <Link to={`/The-Imitation-Store/products/${product.category}/${product.id}`} className='productLink' key={product.id}>
                             <div className="productOverview">
                                 <div className="productImageContainer">
                                     <img className={`productImage ${product.category}Image`} src={product.image} alt={product.title} />

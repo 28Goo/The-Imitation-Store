@@ -20,7 +20,7 @@ export default function Categories() {
                     const image = require(`../../Assets/${category}.jpg`).default;
                     return(
                         <div className={`category ${category}`} key={uniqid()}>
-                        <Link className='categoryLink' to={`products/${category}`}>
+                        <Link className='categoryLink' to={`/The-Imitation-Store/products/${category}`}>
                             <img className='categoryImage' src={image} alt={category} />
                             <span className="categoryName">{capitalizeFirstLetter(category)}</span>
                         </Link>

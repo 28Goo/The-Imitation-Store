@@ -25,8 +25,8 @@ export default function Nav({ cartLength }) {
     return(
         <nav className='navbar'>
             <ul>
-                <NavLink to='/products'> <li className='navProducts'>Shop</li> </NavLink>
-                <NavLink to='/'> <h2 className='logo'>The Imitation Store</h2> </NavLink>
+                <NavLink to='/The-Imitation-Store/products'> <li className='navProducts'>Shop</li> </NavLink>
+                <NavLink to='/The-Imitation-Store'> <h2 className='logo'>The Imitation Store</h2> </NavLink>
                 <li className='cartLogoContainer'>
                     <span className="material-icons cartLogo">shopping_bag</span>
                     <span className='cartLength'>({cartLength})</span>
