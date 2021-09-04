@@ -11,6 +11,7 @@
 .productsHeader {
     font-family: var(--Oswald);
     text-align: center;
+    margin: 20px;
 }
 
 .productsContainer {
