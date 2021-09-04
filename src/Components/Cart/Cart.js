@@ -19,24 +19,33 @@ export default function Cart({ cart, incrementQuantity, removeFromCart, inputQua
 
     return(
         <div className="cart">
-            <h1>Cart</h1>
+            <h1 className='cartHeader'>Cart</h1>
             {
                 cart.map(product => {
                     return(
                         <div className="cartProducts" key={product.id}>
-                            <p>{product.title}</p>
-                            <p>${(product.price * product.quantity).toFixed(2)}</p>
-                            <CartForm product={product}
-                                incrementQuantity={incrementQuantity}
-                                removeFromCart={removeFromCart}
-                                inputQuantity={inputQuantity}
-                            />
+                            <div className="productCartImageContainer">
+                                <img src={product.image} alt={product.title} className={`productCartImage ${product.category}CartImage`}/>
+                            </div>
+                            <div className="cartDetails">
+                                <p className='productCartName'>{product.title}</p>
+                                <div className="priceFormContainer">
+                                    <p className='productCartPrice'>${(product.price * product.quantity).toFixed(2)}</p>
+                                    <CartForm product={product}
+                                        incrementQuantity={incrementQuantity}
+                                        removeFromCart={removeFromCart}
+                                        inputQuantity={inputQuantity}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     )
                 })
             }
-            <h1 className="total">${total}</h1>
-            <button className="checkout" onClick={checkout}>Checkout</button>
+            <div className="totalCheckout">
+                <span className="total">Total: ${total}</span>
+                <button className="checkout" onClick={checkout}>Checkout</button>
+            </div>
         </div>
     )
 }

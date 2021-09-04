@@ -8,17 +8,18 @@ ul {
 
 nav {
     justify-content: center;
-    margin-bottom: 20px;
+    background-color: black;
 }
 
 ul {
     list-style: none;
     width: 100%;
     justify-content: space-between;
+    color: white;
 }
 
 nav a {
-    color: black;
+    color: white;
 }
 
 a {

@@ -1,13 +1,26 @@
 @import './Constants.css';
 
 .titleSection {
+    position: relative;
     display: grid;
     place-content: center;
     height: 100vh;
+    margin-bottom: 10px;
+}
+
+#landingVideo {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -1;
+    height: 100vh;
+    min-width: 100%;
 }
 
 .landingTitle {
     font-family: var(--Oswald);
+    color: white;
+    text-align: center;
 }
 
 .categories {

@@ -3,6 +3,7 @@
     --Noto: 'Noto Sans JP', sans-serif;
     --Product-Border: 0.1px solid rgb(202, 202, 202);
     --Quantity-Border: 0.5px solid rgb(160, 160, 160);
+    --Hover-Button-BG: rgb(221, 221, 221);
 }
 
 * {

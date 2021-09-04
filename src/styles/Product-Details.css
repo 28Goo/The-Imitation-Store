@@ -56,6 +56,12 @@
     border: var(--Quantity-Border);
     border-top: var(--Quantity-Border);
     border-bottom: var(--Quantity-Border);
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.quantityButton:hover {
+    background-color: var(--Hover-Button-BG);
 }
 
 .decrementButton {
@@ -68,7 +74,17 @@
 
 .addToCart {
     font-family: var(--Oswald);
+    border: var(--Quantity-Border);
+    background-color: white;
+    color: black;
     width: 50%;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+.addToCart:hover {
+    background-color: black;
+    color: white;
 }
 
 @media screen and (min-width: 300px) {
