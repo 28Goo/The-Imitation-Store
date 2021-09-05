@@ -6,6 +6,7 @@ export default function Products() {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0,0);
         fetchProducts().then(products => setProducts(products));
     },[]);
     

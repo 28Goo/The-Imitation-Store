@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import '../../Styles/Landing.css';
 import Categories from './Categories';
 
 function Landing() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },[]);
+
   const landingVideo = require('../../Assets/Landing-Video.mp4').default;
 
   return (

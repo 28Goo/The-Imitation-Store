@@ -8,6 +8,8 @@ export default function ProductDetails({ match, cart, addToCart }) {
     const [quantity, setQuantity] = useState(1);
 
     useEffect(() => {
+        window.scrollTo(0,0);
+
         (async () => {
             try {
                 const { id } = match.params;

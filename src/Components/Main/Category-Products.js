@@ -7,6 +7,7 @@ export default function CategoryProduct({ match }) {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
+        window.scrollTo(0,0);
         const { category } = match.params;
         fetchCategoryProduct(category).then(products => setProducts(products));
     },[match]);
