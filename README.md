@@ -33,6 +33,10 @@ npm start
 
 ![image](https://user-images.githubusercontent.com/77486220/132814437-78b6d7e3-a54a-4a4a-99bb-fc43cab530e6.png)
 
+### Category Page
+
+![image](https://user-images.githubusercontent.com/77486220/132814878-f68ee0ec-d352-4829-81b2-ae69bf7957b0.png)
+
 ### Product Page
 
 ![image](https://user-images.githubusercontent.com/77486220/132814513-40ec83ff-8005-4472-ae39-4dd34509e2f6.png)
