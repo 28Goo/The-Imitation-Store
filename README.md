@@ -51,4 +51,4 @@ npm start
 -   React
 -   React Hooks
 -   React Router
--   Fake Store API
+-   [Fake Store API](https://fakestoreapi.com/)
