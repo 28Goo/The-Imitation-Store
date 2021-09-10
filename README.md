@@ -1,6 +1,6 @@
 # The Imitation Store
 
-An E-Commerce Cart React Application created with the use ofFakeStore API
+An E-Commerce Cart React Application created with the use of FakeStore API
 
 ## Features
 
